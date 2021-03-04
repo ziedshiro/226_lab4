@@ -4,10 +4,13 @@ int main()
 {
     char s[200];
     gets(s);
-    int i;
-    for(i=0;i<strlen(s);i++)
+    int i=0,n;
+    n=strlen(s);
+    do
     {
         if(s[i]!=s[i+1])
             printf("%c",s[i]);
+            i++;
     }
+    while(i!=n);
 }
