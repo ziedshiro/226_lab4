@@ -33,9 +33,24 @@ int main()
         }
     }
     }
-
+    int max,min,mx=0,mn=0;
+    max=r[0];
+    min=r[0];
     for(i=0;i<n-2;i++)
-        printf("%d\n",r[i]);
+        if(max<r[i])
+        {
+            max=r[i];
+            mx=i;
+        }
+    printf("%d ",mx+1);
+    for(i=0;i<n-2;i++)
+        if(min>r[i])
+        {
+            min=r[i];
+            mn=i;
+        }
+    printf("%d",mn+1);
+
 
 
 }
