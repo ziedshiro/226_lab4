@@ -13,13 +13,23 @@ int main()
     {
         if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/')
         {
-
+            if(s[i]=='+')
+                N[j-1]+=N[j];
+            else if(s[i]=='-')
+                N[j-1]-=N[j];
+            else if(s[i]=='*')
+                N[j-1]*=N[j];
+            else if(s[i]=='/')
+                N[j-1]/=N[j];
+            N[j]=0;
+            j--;
         }
         else
         {
-            N[j]=s[i]
+            N[j]=s[i];
             j++;
         }
     }
+    printf("%d",N[j]);
 }
 
