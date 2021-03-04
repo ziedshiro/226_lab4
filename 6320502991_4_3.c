@@ -3,4 +3,5 @@
 int main()
 {
     char s[200];
+    gets(s);
 }
