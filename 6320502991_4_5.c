@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int k,i,n,j,r[4],t;;
+    int k,i,n,j,r[4],t,T;
     scanf("%d",&n);
     char s[n][50];
     fflush(stdin);
@@ -30,8 +30,11 @@ int main()
         else if(s[i][j]=="C")
         {
             t=r[0];
-            r[0]=r[3];
-            r[3]=t
+            r[0]=r[2];
+            r[2]=t
+            T=r[1];
+            r[1]=r[3];
+            r[3]=T;
         }
         else if(s[i][j]=="D")
         {
