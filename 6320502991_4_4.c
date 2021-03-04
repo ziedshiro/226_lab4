@@ -2,16 +2,11 @@
 #include<string.h>
 int main()
 {
-    char s[1000];
+    char s[1000],S[11][4]={"i","of","the","on","at","for","with","a","an","in","and"};
     scanf("%[^\n]s",s);
-    char* t=strtok(s," "),i=0;
-    while(t!=NULL)
+    int i;
+    for(i=0;i<strlen(s);i++)
     {
-        if(i==0)
-            printf("%c",toupper(t[0]));
-        if(i!=0&&strcmp(t,"i")&&strcmp(t,"of")&&strcmp(t,"the")&&strcmp(t,"on")&&strcmp(t,"at")&&strcmp(t,"for")&&strcmp(t,"with")&&strcmp(t,"a")&&strcmp(t,"an")&&strcmp(t,"in")&&strcmp(t,"and"))
-            printf("%c",toupper(t[0]));
-        i++;
-        t=strtok(NULL," ");
+        if()
     }
 }
