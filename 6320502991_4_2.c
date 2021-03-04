@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int i,n,N[5],j=0;
+    int i,n,N[5],j=0,r;
     for(i=0;i<5;i++)
         N[i]=0;
     scanf("%d",&n);
@@ -14,14 +14,15 @@ int main()
         if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/')
         {
             if(s[i]=='+')
-                N[j-1]+=N[j];
+                r=N[j-1]+N[j];
             else if(s[i]=='-')
-                N[j-1]-=N[j];
+                r=N[j-1]-N[j];
             else if(s[i]=='*')
-                N[j-1]*=N[j];
+                r=N[j-1]*N[j];
             else if(s[i]=='/')
-                N[j-1]/=N[j];
-            N[j]=0;
+                r=N[j-1]/N[j];
+            N[j]=NULL;
+            printf("%d\n",r);
             j--;
         }
         else
@@ -30,6 +31,6 @@ int main()
             j++;
         }
     }
-    printf("%d",N[j]);
+    printf("%d",r);
 }
 
