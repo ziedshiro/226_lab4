@@ -2,11 +2,15 @@
 #include<string.h>
 int main()
 {
-    int n;
+    int i,n;
     scanf("%d",&n);
-    char s[n];
+    char s[n+1];
     fflush(stdin);
     gets(s);
-    puts(s);
+    for(i=0;i<strlen(s);i++)
+    {
+        if(s[i]=='+'||s[i]=='-'||s[i]=='*'||s[i]=='/')
+            printf("%c",s[i]);
+    }
 }
 
