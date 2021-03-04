@@ -3,14 +3,13 @@
 int main()
 {
     char s[200];
-    gets(s);
+    scanf("%s",s);
     int i=0,n;
-    n=strlen(s);
     do
     {
         if(s[i]!=s[i+1])
             printf("%c",s[i]);
             i++;
     }
-    while(i!=n);
+    while(i!=strlen(s));
 }
