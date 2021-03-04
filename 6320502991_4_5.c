@@ -2,7 +2,7 @@
 #include<string.h>
 int main()
 {
-    int k,i,n,j,r[4],t,T;
+    int k,i,n,j,r[4],t,T,h;
     scanf("%d",&n);
     char s[n][50];
     fflush(stdin);
@@ -15,19 +15,19 @@ int main()
     {
         for(j=0;j<strlen(s[i]);j++)
         {
-        if(s[i][j]=="A")
+        if(s[i][j]=='A')
         {
             t=r[1];
             r[1]=r[2];
             r[2]=t;
         }
-        else if(s[i][j]=="B")
+        else if(s[i][j]=='B')
         {
             t=r[0];
             r[0]=r[3];
             r[3]=t;
         }
-        else if(s[i][j]=="C")
+        else if(s[i][j]=='C')
         {
             t=r[0];
             r[0]=r[2];
@@ -36,7 +36,7 @@ int main()
             r[1]=r[3];
             r[3]=T;
         }
-        else if(s[i][j]=="D")
+        else if(s[i][j]=='D')
         {
             t=r[0];
             r[0]=r[1];
@@ -45,7 +45,7 @@ int main()
             r[2]=r[3];
             r[3]=T;
         }
-        else if(s[i][j]=="E")
+        else if(s[i][j]=='E')
         {
             t=r[0];
             r[0]=r[3];
@@ -56,10 +56,11 @@ int main()
         }
         }
         for(k=0;k<4;k++)
-            if(r==1)
-        {
-            printf("%d\n",k+1);break;
-        }
+            if(r[k]==1)
+            printf("%d\n",k+1);
+        for(h=0;h<4;h++)
+        r[h]=0;
+    r[0]=1;
 
     }
 
